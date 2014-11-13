@@ -1,0 +1,7 @@
+jaztec_fiddle_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: JaztecFiddleBundle:Default:index }
+
+random:
+    path: /random/{var}
+    defaults: { _controller: JaztecFiddleBundle:Random:index }

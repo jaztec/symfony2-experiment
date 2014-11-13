@@ -1,0 +1,4 @@
+services:
+#    jaztec_fiddle.example:
+#        class: Jaztec\FiddleBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
