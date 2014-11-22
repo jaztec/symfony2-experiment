@@ -1,0 +1,21 @@
+Jaztec\CmsBundle\Entity\ArticleCategory:
+    type: entity
+    table: ArticleCategories
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+    
+    manyToOne:
+        parent:
+            targetEntity: ArticleCategory
+            joinColumn:
+                name: parentId
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

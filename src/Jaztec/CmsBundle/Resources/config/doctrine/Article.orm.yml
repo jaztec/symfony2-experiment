@@ -1,0 +1,32 @@
+Jaztec\CmsBundle\Entity\Article:
+    type: entity
+    table: Articles
+    repositoryClass: Jaztec\CmsBundle\Entity\ArticleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        createdAt:
+            type: datetime
+        modifiedAt:
+            type: datetime
+        title:
+            type: string
+            length: 255
+        description:
+            type: string
+            length: '511'
+        content:
+            type: text
+
+    oneToOne:
+        category:
+            targetEntity: ArticleCategory
+            joinColumn:
+                name: categoryId
+                referencedColumnName: id
+
+    lifecycleCallbacks: {  }
