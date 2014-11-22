@@ -1,4 +1,8 @@
-jaztec_fiddle:
-    resource: "@JaztecFiddleBundle/Resources/config/routing.yml"
+jaztec_cms:
+    resource: "@JaztecCmsBundle/Resources/config/routing.yml"
     prefix:   /
+
+#jaztec_fiddle:
+#    resource: "@JaztecFiddleBundle/Resources/config/routing.yml"
+#    prefix:   /
 
