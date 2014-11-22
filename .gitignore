@@ -40,3 +40,7 @@
 /composer.phar
 /nbproject/private/
 /nbproject/
+
+# Assetic generated files
+/web/css/
+/web/js/

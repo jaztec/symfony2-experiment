@@ -2,10 +2,24 @@
 
 {# Set stylesheets and javascripts #}
 {% block stylesheets %}
+    {% stylesheets
+        '@JaztecCmsBundle/Resources/public/sass/_base.scss'
+        filter="compass" 
+        output='/css/base-sass-assets.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
     {% stylesheets 
         '@JaztecCmsBundle/Resources/public/css/bootstrap.css'
         '@JaztecCmsBundle/Resources/public/css/bootstrap-theme.css'
-        filter='cssrewrite' %}
+        filter='cssrewrite'
+        output='/css/assets.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+    {# Including SASS files #}
+    {% stylesheets
+        '@JaztecCmsBundle/Resources/public/sass/blog.scss'
+        filter="compass" 
+        output='/css/sass-assets.css' %}
         <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
 {% endblock %}
